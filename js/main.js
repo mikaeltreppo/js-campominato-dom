@@ -45,7 +45,7 @@ function explosion(num, box) {
         }
     }
     points++;
-    pointsDom.innerHTML = points;
+    pointsDom.innerHTML ="Punteggio: " + points;
 }
 
 
