@@ -2,23 +2,33 @@ let entranceDom = document.getElementById('entrance');
 let buttonDom = document.getElementById('buttonStartGame');
 
 //array contenente numeri casuali pc
-let mineLocation = []
+let mineLocation = [];
 // creaziine numeri casuali computer
-let casualRandomNumber = createNumberPc(1,100);
-function createNumberPc (min, max){
-   let casualNumber = Math.floor(Math.random() * (max - min) + min );
-   return casualNumber;
-}
+let casualRandomNumber;
+
+    for (let i = 0; i < 16; i++) {
+        casualRandomNumber = createNumberPc(1, 100);
+        function createNumberPc(min, max) {
+            let casualNumber = Math.floor(Math.random() * (max - min) + min);
+            return casualNumber;
+        }
+        if (!mineLocation.includes(casualRandomNumber)) {
+            mineLocation.push(casualRandomNumber);
+        }
+        else {
+            i--
+        }
+    }
+
+
 console.log(casualRandomNumber);
-//push nell array il numero casuale generato
-mineLocation.push(casualRandomNumber);
 console.log(mineLocation);
 
 
 //riparte il gioco
 buttonDom.addEventListener('click',
     function () {
-        location.reload(); 
+        location.reload();
     });
 
 //creato numero all'interno e box e sfondo blu
