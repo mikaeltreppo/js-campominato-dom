@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 70px;
+}
+.ms_logo{
+    height: 60px;
+    width: 60px;
+}
+.ms_title{
+    height: 100%;
+}
+#buttonStartGame{
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;  
+}
+main{
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    position: relative;
+}
+footer{
+    height: 70px;
+}
+.ms_container{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+.boxFinished{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    background-color: blanchedalmond;
+
+}
+.bg_blue{
+    background-color: aqua;
+}
